@@ -1,5 +1,5 @@
   
-FROM willhallonline/ansible:2.9-ubuntu-20.04
+FROM willhallonline/ansible:2.9-alpine
 
 COPY ./dist/index.js /index.js
 
