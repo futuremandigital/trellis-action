@@ -1,17 +1,14 @@
   
-FROM cytopia/ansible:latest-tools
+FROM willhallonline/ansible:2.9-ubuntu-20.04
 
 COPY ./dist/index.js /index.js
 
 # Basic Packages + Sage
 RUN apk add --no-cache --virtual .build-deps \
-        yarn rsync \
+        nodejs yarn rsync \
         g++ make autoconf automake libtool nasm \
         libpng-dev libjpeg-turbo-dev \
     && rm -rf /var/cache/apk/* /tmp/*
-
-RUN apk add --no-cache nodejs-current --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
-RUN node --version
 
 # Basic smoke test
 # RUN echo 'node --version' && node --version && \
