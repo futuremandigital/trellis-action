@@ -5,7 +5,7 @@ COPY ./dist/index.js /index.js
 
 # Basic Packages + Sage
 RUN apk add --no-cache --virtual .build-deps \
-        nodejs yarn rsync \
+        nodejs=14.15.1 yarn rsync \
         g++ make autoconf automake libtool nasm \
         libpng-dev libjpeg-turbo-dev \
     && rm -rf /var/cache/apk/* /tmp/*
