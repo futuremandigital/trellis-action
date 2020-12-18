@@ -1,5 +1,5 @@
   
-FROM cytopia/ansible:2.5
+FROM ju2wheels/docker-ansible:2.5-alpine-3.3
 
 COPY ./dist/index.js /index.js
 
