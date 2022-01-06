@@ -1,5 +1,5 @@
   
-FROM willhallonline/ansible:2.9-alpine-3.15
+FROM cytopia/ansible:2.10
 
 COPY ./dist/index.js /index.js
 
