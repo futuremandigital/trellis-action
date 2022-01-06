@@ -1,5 +1,5 @@
   
-FROM willhallonline/ansible:2.10-alpine-3.15
+FROM willhallonline/ansible:2.9-alpine-3.15
 
 COPY ./dist/index.js /index.js
 
@@ -9,8 +9,6 @@ RUN apk add --no-cache --virtual .build-deps \
         g++ make autoconf automake libtool nasm \
         libpng-dev libjpeg-turbo-dev \
     && rm -rf /var/cache/apk/* /tmp/*
-
-RUN ansible-galaxy collection install community.general
 
 # Basic smoke test
 # RUN echo 'node --version' && node --version && \
