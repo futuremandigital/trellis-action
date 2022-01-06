@@ -1,5 +1,5 @@
   
-FROM cytopia/ansible:2.10
+FROM cytopia/ansible:2.10-tools
 
 COPY ./dist/index.js /index.js
 
